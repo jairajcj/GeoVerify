@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoVerify | AI-Blockchain Sentinel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <span class="icon">🌍</span> GeoVerify
+            </div>
+            <ul class="nav-links">
+                <li class="active">Dashboard</li>
+                <li>Audit Log</li>
+                <li>Sentinel Config</li>
+                <li>Settings</li>
+            </ul>
+            <div class="status-panel">
+                <div class="status-item">
+                    <span class="label">System Status</span>
+                    <span class="value online">ONLINE</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">Nodes Active</span>
+                    <span class="value">128</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1>Sentinel Dashboard</h1>
+                <div class="user-profile">
+                    <span>Admin</span>
+                    <div class="avatar"></div>
+                </div>
+            </header>
+
+            <section class="dashboard-grid">
+                <!-- Map / Input Section -->
+                <div class="card map-card">
+                    <div class="card-header">
+                        <h2>New Asset Verification</h2>
+                        <span class="badge live">LIVE FEED</span>
+                    </div>
+                    <div class="map-interface">
+                        <div class="coordinates-input">
+                            <input type="text" id="latInput" placeholder="Latitude (e.g., -3.4653)" value="-3.4653">
+                            <input type="text" id="lonInput" placeholder="Longitude (e.g., 62.2159)" value="62.2159">
+                            <button id="verifyBtn" class="btn-primary">
+                                <span class="btn-text">Initiate Scan</span>
+                                <div class="loader hidden"></div>
+                            </button>
+                        </div>
+                        <div class="visualizer" id="visualizer">
+                            <div class="scanning-overlay hidden"></div>
+                            <div class="placeholder-text">Satellite Uplink Ready...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Results -->
+                <div class="card result-card">
+                    <div class="card-header">
+                        <h2>Analysis Result</h2>
+                    </div>
+                    <div class="metrics-grid" id="resultsContainer">
+                        <div class="metric">
+                            <span class="label">Asset Status</span>
+                            <span class="value" id="statusValue">--</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Green Cover</span>
+                            <span class="value" id="coverValue">--%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">AI Confidence</span>
+                            <span class="value" id="confidenceValue">--%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blockchain Feed -->
+                <div class="card wide-card">
+                    <div class="card-header">
+                        <h2>Immutable Ledger Stream</h2>
+                        <button id="refreshChain" class="btn-icon">↻</button>
+                    </div>
+                    <div class="ledger-feed" id="ledgerFeed">
+                        <!-- Blocks will be injected here -->
+                        <div class="ledger-item empty-state">Waiting for new blocks...</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
