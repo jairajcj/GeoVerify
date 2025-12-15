@@ -71,3 +71,5 @@ Once the server is running, open your web browser and navigate to:
 3.  **View Results**: Watch the "Green Cover" metrics update in real-time.
 4.  **Check the Ledger**: See the new block appear in the "Immutable Ledger Stream" below.
 need to add instructions  not wihci are in powershell
+   and where does it take the gps and all need to be soleved as well
+ 
