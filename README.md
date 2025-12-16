@@ -61,7 +61,7 @@ We solved these problems by replacing human auditors with **deterministic code**
     ```bash
     python app.py
     ```
-
+works 
 ### Accessing the Dashboard
 Once the server is running, open your web browser and navigate to:
 👉 **http://127.0.0.1:5000**
