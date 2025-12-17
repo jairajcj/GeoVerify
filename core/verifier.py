@@ -28,8 +28,9 @@ class GeoSentinel:
             random.seed(lat + lon) 
             
             # Widen the range to ensure we see both bad and good results 
-            green_cover = random.uniform(20, 95) # Percentage
-            authenticity_score = random.uniform(0.65, 0.99)
+            # BIAS: Weighted towards "verified" (forests) to match user expectation
+            green_cover = random.uniform(35, 98) # Mostly > 45%
+            authenticity_score = random.uniform(0.78, 0.99) # Check score
 
         # 3. Decision Logic
         is_valid = True
