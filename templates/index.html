@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoVerify </title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>GeoVerify | AI-Blockchain Sentinel</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
+
 <body>
     <div class="app-container">
         <!-- Sidebar -->
@@ -83,6 +87,12 @@
                             <span class="label">AI Confidence</span>
                             <span class="value" id="confidenceValue">--%</span>
                         </div>
+                        <div class="metric full-width"
+                            style="grid-column: 1 / -1; margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.5rem;">
+                            <span class="label">Sentinel Report</span>
+                            <span class="value" id="reasonValue"
+                                style="font-size: 0.9rem; font-weight: normal; color: #aaa;">Waiting for scan...</span>
+                        </div>
                     </div>
                 </div>
 
@@ -102,4 +112,5 @@
     </div>
     <script src="/static/js/main.js"></script>
 </body>
+
 </html>

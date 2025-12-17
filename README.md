@@ -6,10 +6,24 @@ GeoVerify is a high-efficiency system designed to solve the problem of carbon cr
 2.  **Blockchain Layer (Immutable Auditing)**: Records verification results on a tamper-proof ledger, ensuring a "Chain of Custody" for every carbon credit.
 
 ## Architecture
-- **Frontend**: Next.js (React) - A modern, high-performance dashboard for auditors and buyers.
-- **Backend**: Python (FastAPI) - Handles the "Sentinel" logic.
+- **Frontend**: HTML5, CSS3, JavaScript - A lightweight, responsive dashboard for auditors and buyers.
+- **Backend**: Python (Flask) - Handles the "Sentinel" logic and Blockchain API.
     - **AI Engine**: Efficient image processing to calculate green cover.
     - **Ledger Core**: A lightweight cryptographic ledger to store verification hashes.
+
+## 👨‍⚖️ For Judges: Demo Capabilities
+To demonstrate the system's "Verified" vs "Flagged" logic, use these specific coordinates:
+
+### ✅ For a "Verified" Result (The Golden Ticket)
+These coordinates simulate a protected, high-density forest region.
+*   **Latitude**: `11.4102`
+*   **Longitude**: `76.6950`
+*   **Expected Result**: `VERIFIED` with "High Density Forest Detected".
+
+### ❌ For a "Flagged" Result
+Any other random coordinate will likely be flagged if the green cover is insufficient in the simulation.
+*   **Example**: `0.0000`, `0.0000`
+*   **Expected Result**: `FLAGGED` with "Insufficient Green Cover".
 
 ## 🚩 The Problem: "The Phantom Forest" Crisis
 The global Carbon Credit market suffers from three critical failures:

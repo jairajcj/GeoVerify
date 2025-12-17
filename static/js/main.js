@@ -53,6 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
         statusVal.setAttribute('data-status', data.status);
         coverVal.textContent = data.green_cover_percentage + '%';
         confidVal.textContent = data.ai_confidence + '%';
+
+        // Update the Reason Field
+        const reasonEl = document.getElementById('reasonValue');
+        if (data.reasons && data.reasons.length > 0) {
+            reasonEl.textContent = data.reasons.join(' | ');
+            reasonEl.style.color = data.status === 'VERIFIED' ? '#4CAF50' : '#ff6b6b';
+        } else {
+            reasonEl.textContent = 'Analysis Complete';
+            reasonEl.style.color = '#aaa';
+        }
     }
 
     async function updateLedger() {
