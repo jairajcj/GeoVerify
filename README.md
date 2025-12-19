@@ -84,4 +84,4 @@ Once the server is running, open your web browser and navigate to:
 2.  **Click "Initiate Scan"**: The AI Sentinel will analyze the location.
 3.  **View Results**: Watch the "Green Cover" metrics update in real-time.
 4.  **Check the Ledger**: See the new block appear in the "Immutable Ledger Stream" below.
-
+5. not only works on a situated land coordinates it works on all as in the similarity to the geolocation findings 
