@@ -31,14 +31,14 @@ The global Carbon Credit market suffers from three critical failures:
 2.  **Double Spending**: Without a central source of truth, the same environmental asset acts as collateral for multiple different buyers.
 3.  **Audit Inefficiency**: Traditional verification relies on manual human inspection, which is slow, expensive, and prone to corruption.
 
-##  The Solution: GeoVerify Protocol
+  The Solution: GeoVerify Protocol
 We solved these problems by replacing human auditors with **deterministic code**:
 
-### 1. Trusted Verification (The "AI Sentinel")
+ 1. Trusted Verification (The "AI Sentinel")
 *   **How it works**: We built a Python-based Geospatial Sentinel that analyzes satellite imagery coordinates in real-time. 
 *   **The Fix**: Instead of trusting a document, the system calculates the **Green Cover Percentage** mathematically. If the forest isn't visible in the data, the credit is rejected.
 
-### 2. Immutable Truth (The "Ledger")
+ 2. Immutable Truth (The "Ledger")
 *   **How it works**: Every verification result is hashed (SHA-256) and linked to the previous record in a custom lightweight Blockchain.
 *   **The Fix**: This solves **Double Spending**. Once a coordinate is audited and recorded in block #N, its history is permanent. A bad actor cannot sell that same land again without the detailed history being visible.
 
@@ -48,10 +48,10 @@ We solved these problems by replacing human auditors with **deterministic code**
 
 ##  How to Run the Software
 
-### Prerequisites
+ Prerequisites
 *   **Python 3.8+** must be installed on your system.
 
-### Step-by-Step Installation
+ Step-by-Step Installation
 
 1.  **Clone the Repository**
     ```bash
@@ -65,23 +65,23 @@ We solved these problems by replacing human auditors with **deterministic code**
     pip install -r requirements.txt
     ```
 
-### Running the Application
+ Running the Application
 
-**Option A: One-Click Start (Windows)**
+Option A: One-Click Start (Windows)**
 *   Double-click the `run_project.bat` file in the root directory.
 
-**Option B: Manual Start (Terminal)**
+Option B: Manual Start (Terminal)**
 *   Run the following command in your terminal:
     ```bash
     python app.py
     ```
 works 
-### Accessing the Dashboard
+ Accessing the Dashboard
 Once the server is running, open your web browser and navigate to:
  **http://127.0.0.1:5000**
 
-1.  **Enter Coordinates**: Input a Latitude/Longitude (or use the defaults).
-2.  **Click "Initiate Scan"**: The AI Sentinel will analyze the location.
-3.  **View Results**: Watch the "Green Cover" metrics update in real-time.
-4.  **Check the Ledger**: See the new block appear in the "Immutable Ledger Stream" below.
+1.  Enter Coordinates**: Input a Latitude/Longitude (or use the defaults).
+2.  Click "Initiate Scan"**: The AI Sentinel will analyze the location.
+3.  View Results**: Watch the "Green Cover" metrics update in real-time.
+4.  *Check the Ledger**: See the new block appear in the "Immutable Ledger Stream" below.
 5. not only works on a situated land coordinates it works on all as in the similarity to the geolocation findings 
